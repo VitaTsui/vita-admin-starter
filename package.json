@@ -16,7 +16,6 @@
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
     "@ant-design/x": "^2.0.1",
-    "@hsu-react/ui": "^0.0.2",
     "@antv/g": "^6.1.21",
     "@antv/g6": "4.8.24",
     "@antv/g6-plugin": "0.8.24",
@@ -34,6 +33,7 @@
     "@emotion/styled": "^11.14.1",
     "@hsu-canvas/renderer": "^0.0.12",
     "@hsu-react/single-router": "^0.0.24",
+    "@hsu-react/ui": "^0.0.3",
     "@iconify/json": "^2.2.385",
     "@iconify/react": "^5.0.1",
     "@microsoft/fetch-event-source": "^2.0.1",
