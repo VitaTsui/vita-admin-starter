@@ -1,0 +1,66 @@
+.slider {
+  height: 32px;
+  margin: 0px;
+  padding-block: 0px;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  .ant-slider-step,
+  .ant-slider-track,
+  .ant-slider-rail {
+    top: 0px;
+    height: 100% !important;
+  }
+
+  .ant-slider-handle {
+    position: relative;
+    top: 50%;
+    transform: translate(calc(-50% - 4px), calc(-50% + 1px)) !important;
+
+    width: 36px;
+    height: 36px !important;
+
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+
+      &:after {
+        cursor: grabbing;
+      }
+    }
+
+    &::after,
+    &::before {
+      margin-left: 50%;
+      transform: translateX(-50%);
+
+      width: 4px !important;
+      height: calc(100% - 8px) !important;
+
+      border-radius: 100px !important;
+    }
+
+    &:after {
+      inset-inline-start: -1px !important;
+      inset-block-start: 2.5px !important;
+      box-shadow: none !important;
+
+      cursor: grab;
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        width: 4px !important;
+        height: 100% !important;
+      }
+
+      &:after {
+        inset-inline-start: -1px !important;
+        inset-block-start: -1px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.Search {
+  --column-number: 4;
+  --column-offset-width: 0px;
+  --column-compensate-width: 0px;
+
+  position: relative;
+
+  width: 100%;
+  padding: 14px 16px;
+
+  // CF 风格：描边白卡片（随外观切换），去投影
+  background: var(--cf-surface);
+
+  border-radius: 8px;
+  border: 1px solid var(--cf-border);
+  box-shadow: none;
+
+  .searchOption {
+    transition: all 0.3s;
+
+    .option {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
+      row-gap: 10px;
+
+      width: 100%;
+
+      .item:not(.unFill) {
+        width: calc(
+          (100% - (var(--column-number) - 1) * 10px) / var(--column-number) -
+            var(--column-offset-width) + var(--column-compensate-width)
+        );
+      }
+    }
+
+    .buttonGroup {
+      flex: 1;
+      display: flex;
+      column-gap: 5px;
+      align-items: center;
+      justify-content: flex-end;
+
+      min-width: max-content;
+      height: 32px;
+
+      &.flexStart {
+        justify-content: flex-start;
+      }
+
+      .ant-btn-icon {
+        font-size: 16px;
+      }
+
+      .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: max-content;
+        height: 32px;
+
+        cursor: pointer;
+
+        span {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .show {
+      width: max-content;
+      padding: 0;
+
+      .icon {
+        transition: all 0.3s;
+      }
+    }
+
+    &.true .buttonGroup .show:not(.advancedFilters) .icon {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &.advancedFilters {
+    .searchOption {
+      .option {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  &.collapseExpand {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+
+    transition: all 0.3s;
+
+    .searchOption {
+      display: grid;
+      grid-template-rows: 0fr;
+
+      .option {
+        overflow: hidden;
+      }
+    }
+
+    &.collapse {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .searchOption {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+
+  .collapseExpand {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 20px;
+
+    background-image: url("./bottomLine.png");
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+
+      height: 30px;
+      padding: 10px 20px;
+      margin-top: -8px;
+
+      cursor: pointer;
+
+      .collapseExpandIcon {
+        font-size: 22px;
+
+        opacity: 0.5;
+
+        transform: rotate(180deg);
+
+        transition: transform 0.3s;
+
+        &.collapse {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+.DrawerForm {
+  .drawerTitle {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+}
+
+.filterDropdown {
+  .ant-dropdown-menu {
+    height: max-content;
+    max-height: 500px;
+
+    .filterDropdownItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .filterDropdownItemIcon {
+        font-size: 16px;
+
+        cursor: pointer;
+      }
+    }
+  }
+}

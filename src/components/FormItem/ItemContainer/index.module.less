@@ -1,0 +1,387 @@
+.formItem {
+  --label-width: auto;
+  --label-height: max-content;
+  --label-min-height: 32px;
+  --input-width: 100%;
+  --input-height: max-content;
+  --input-min-height: 32px;
+  --input-horizontal-min-width: 0px;
+  --input-horizontal-flex-grow: 1;
+
+  width: 100%;
+  min-height: max-content;
+
+  margin: 0px;
+
+  .tipsIcon {
+    margin-left: 6px;
+
+    cursor: pointer;
+  }
+
+  .ant-picker {
+    width: 100%;
+  }
+
+  .ant-form-item-row {
+    width: 100%;
+    height: 100%;
+
+    .ant-form-item-control {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+
+      width: var(--input-width) !important;
+      max-width: 100%;
+
+      .ant-form-item-control-input {
+        height: var(--input-height);
+        min-height: var(--input-min-height);
+
+        .ant-form-item-control-input-content {
+          display: flex;
+          align-items: center;
+
+          height: 100%;
+          min-height: inherit;
+
+          > * {
+            min-height: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-form-item-label {
+    flex: 0 1 auto !important;
+    display: inline-flex;
+    align-items: center;
+
+    width: var(--label-width);
+    height: var(--label-height);
+    min-height: var(--label-min-height);
+    padding: 0px;
+
+    white-space: nowrap;
+
+    > label {
+      justify-content: flex-end;
+
+      width: 100%;
+      height: max-content;
+
+      font-size: 14px;
+      font-weight: 400;
+
+      pointer-events: none;
+
+      .label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: 100%;
+
+        .labelCont {
+          width: max-content;
+          max-width: 100%;
+          min-width: 0px;
+
+          &.labelBreak {
+            display: inline-block;
+
+            white-space: pre-wrap;
+            word-break: break-all;
+            word-wrap: break-word;
+          }
+
+          &.labelEllipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        &::after {
+          position: relative;
+
+          content: ":";
+
+          margin-block: 0;
+          margin-inline-start: 2px;
+          margin-inline-end: 8px;
+        }
+      }
+
+      .labelExtra {
+        display: inline-flex;
+        justify-content: flex-end;
+        flex-basis: 100%;
+
+        color: var(--cf-text-2);
+        font-size: 14px;
+        white-space: pre-wrap;
+      }
+
+      .labelContent {
+        display: inline-flex;
+        align-items: center;
+
+        width: min-content;
+      }
+
+      .tipsIcon {
+        pointer-events: auto;
+
+        &::after {
+          position: relative;
+
+          content: ":";
+
+          margin-block: 0;
+          margin-inline-start: 2px;
+          margin-inline-end: 8px;
+        }
+      }
+
+      .tipsIconNode {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        pointer-events: auto;
+
+        cursor: pointer;
+      }
+
+      &.ant-form-item-no-colon {
+        .label {
+          &::after {
+            content: none;
+          }
+        }
+
+        .tipsIcon {
+          &::after {
+            content: none;
+          }
+        }
+      }
+
+      &::before,
+      &::after {
+        content: none !important;
+      }
+
+      &.ant-form-item-required {
+        .label {
+          &::before {
+            content: "*";
+
+            display: inline-block;
+
+            margin-inline-start: 0px;
+            margin-inline-end: 4px;
+
+            color: #ff4d4f;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+          }
+        }
+
+        .labelContent {
+          &::before {
+            content: "*";
+
+            display: inline-block;
+
+            margin-inline-start: 0px;
+            margin-inline-end: 4px;
+
+            color: #ff4d4f;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.after {
+    label.ant-form-item-required {
+      .label {
+        &::before {
+          content: none !important;
+        }
+
+        &::after {
+          content: "*";
+
+          display: inline-block;
+
+          margin-inline-start: 4px;
+          margin-inline-end: 0px;
+
+          color: #ff4d4f;
+          font-size: 14px;
+          font-family: SimSun, sans-serif;
+          line-height: 1;
+        }
+      }
+
+      .labelContent {
+        &::before {
+          content: none !important;
+        }
+      }
+    }
+
+    &.hasLabelContent {
+      label.ant-form-item-required {
+        &::after {
+          content: none;
+        }
+
+        .labelContent {
+          &::after {
+            content: "*";
+
+            display: inline-block;
+
+            margin-inline-start: 4px;
+            margin-inline-end: 0px;
+
+            color: #ff4d4f;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.hideRequired {
+    label.ant-form-item-required {
+      .label {
+        &::before {
+          content: none !important;
+        }
+      }
+
+      .labelContent {
+        &::before {
+          content: none !important;
+        }
+      }
+    }
+
+    &.after {
+      label.ant-form-item-required {
+        .label {
+          &::after {
+            content: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.horizontal {
+    .ant-form-item-row {
+      flex-wrap: nowrap;
+      column-gap: 5px;
+
+      .ant-form-item-control {
+        flex: 1 !important;
+        flex-grow: var(--input-horizontal-flex-grow) !important;
+
+        min-width: var(--input-horizontal-min-width);
+      }
+    }
+
+    &.start {
+      .ant-form-item-control-input-content {
+        text-align: left;
+      }
+    }
+
+    &.between {
+      .ant-form-item-control-input-content {
+        text-align: right;
+      }
+    }
+  }
+
+  &.vertical {
+    --label-height: max-content;
+
+    .ant-form-item-row {
+      flex-direction: column;
+      row-gap: 5px;
+
+      height: max-content;
+
+      .ant-form-item-label {
+        text-align: start;
+
+        width: 100%;
+        margin-right: 0px !important;
+        padding-bottom: 0px;
+
+        label {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          .label {
+            justify-content: flex-start;
+          }
+
+          &:has(> .labelExtra) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+
+            .labelExtra {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+
+      .ant-form-item-control {
+        flex: 0 1 auto !important;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+      }
+    }
+  }
+
+  &.legacyHasLabelExtra {
+    .ant-form-item-row {
+      .ant-form-item-label {
+        label {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+
+          .labelExtra {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+
+  &.hideAdditiona {
+    .ant-form-item-additional {
+      display: none;
+    }
+  }
+}

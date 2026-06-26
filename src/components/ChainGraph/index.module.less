@@ -1,0 +1,39 @@
+.spinWrapper {
+  width: 100%;
+  height: 100%;
+
+  .ant-spin-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ChainGraph {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .miniMapContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    background-color: rgba(253, 253, 255, 1);
+
+    border: 1px solid #2977e7;
+
+    transition: all 0.5s ease;
+
+    opacity: 0;
+
+    &.showMiniMap {
+      opacity: 1;
+    }
+  }
+}

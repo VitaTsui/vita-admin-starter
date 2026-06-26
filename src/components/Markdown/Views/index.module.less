@@ -1,0 +1,73 @@
+.MarkdownViews {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  width: 100%;
+
+  ul,
+  ol {
+    list-style: revert;
+
+    padding-left: 1.3em;
+
+    li {
+      margin-bottom: 5px;
+
+      line-height: 1.5em;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th,
+    td {
+      padding: 4px 8px;
+
+      border: 1px solid #868686;
+    }
+  }
+
+  p {
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    line-height: 1.5em;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .code {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid rgba(240, 237, 234, 0.2);
+    border-radius: 6px;
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      width: 100%;
+      padding: 10px 15px;
+
+      font-size: 14px;
+      color: #efefef;
+
+      background: #212121;
+    }
+  }
+}

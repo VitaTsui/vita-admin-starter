@@ -1,0 +1,74 @@
+.ModalForm {
+  .body {
+    height: max-content;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .formWrapper {
+    width: 100%;
+  }
+
+  .form {
+    --column-num: 2;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .formItemGroup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    width: 100%;
+
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
+
+    .formItemTitle {
+      width: 100%;
+
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .formItemGroupContent {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      width: 100%;
+      padding-left: 40px;
+    }
+  }
+
+  &.horizontal {
+    .form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 10px;
+
+      .formItem {
+        width: calc(
+          (100% - (var(--column-num) - 1) * 10px) / var(--column-num)
+        );
+      }
+    }
+
+    .formItemGroup {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 10px;
+
+      .formItemGroupContent {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 10px;
+      }
+    }
+  }
+}

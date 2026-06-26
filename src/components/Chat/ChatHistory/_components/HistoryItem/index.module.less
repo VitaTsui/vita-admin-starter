@@ -1,0 +1,74 @@
+.renameInput {
+  width: 100%;
+  height: 32px;
+  min-height: 32px;
+}
+
+.historyItem {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: clip;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  &:hover {
+    background: #0000000a;
+
+    .operation {
+      display: flex;
+    }
+  }
+
+  &.active {
+    background: #0000000a;
+
+    color: #126dff;
+  }
+
+  .operation {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    transition: color 0.3s;
+
+    background-color: transparent;
+
+    color: #0a0a0a;
+
+    &:hover {
+      color: #126dff;
+    }
+  }
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  &.delete {
+    color: #ff4d4f;
+  }
+}

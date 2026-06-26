@@ -1,0 +1,130 @@
+.textarea {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-width: 0;
+  height: max-content;
+
+  // CF 风格：随外观切换的描边输入控件
+  background: var(--cf-surface);
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--cf-border);
+  border-radius: 6px;
+
+  color: var(--cf-text);
+
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &.disabled:not(.text) {
+    background-color: var(--cf-subtle);
+
+    border-color: var(--cf-border);
+
+    color: var(--cf-text-3) !important;
+
+    cursor: not-allowed;
+  }
+
+  &.disabled.text {
+    border: none;
+
+    cursor: default;
+
+    > textarea,
+    > span {
+      color: var(--cf-text);
+
+      cursor: default;
+    }
+  }
+
+  textarea {
+    flex: 1;
+
+    background-color: transparent !important;
+  }
+
+  .antd_textarea {
+    padding: 4px 11px;
+
+    border: none;
+    border-radius: 0px;
+
+    font-size: inherit;
+    font-family: inherit;
+
+    background-color: transparent !important;
+
+    &.ant-input-textarea-affix-wrapper {
+      position: relative;
+
+      padding: 0px;
+
+      textarea {
+        padding: 4px 24px 4px 11px;
+
+        border: none;
+        border-radius: 0px;
+
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .ant-input-suffix {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+
+        .ant-input-data-count {
+          position: relative;
+          bottom: auto;
+
+          color: #909399;
+          font-size: 14px;
+        }
+
+        .ant-input-clear-icon {
+          position: relative;
+
+          inset-inline-end: 0;
+          inset-block-start: 0;
+
+          font-size: 14px;
+        }
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &:not(.hasError).focused {
+    border-color: var(--primary-color);
+
+    box-shadow: 0 0 0 2px rgba(19, 194, 194, 0.12);
+  }
+
+  &.hasError {
+    border-color: #ff4d4f;
+
+    box-shadow: 0 0 0 2px rgba(255, 38, 5, 0.06);
+
+    .ant-input-status-error {
+      border: none !important;
+
+      box-shadow: none !important;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.newChatContainer {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+
+  padding: 0px 10px;
+
+  background-color: #f9f9f9;
+
+  .newChat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+
+    width: 100%;
+    height: 32px;
+
+    font-size: 14px;
+
+    background-color: #fff;
+
+    border-radius: 6px;
+    border: 1px solid #0d0d0d0d;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}

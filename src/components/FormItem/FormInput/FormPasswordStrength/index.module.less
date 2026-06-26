@@ -1,0 +1,54 @@
+.strengthBar {
+  position: relative;
+
+  width: 100%;
+
+  &::-webkit-meter-bar {
+    height: 6px;
+
+    border: 0;
+    border-radius: 6px;
+
+    background-color: #00000040;
+  }
+
+  /* value 处于 [min, low]时 */
+  &::-webkit-meter-even-less-good-value {
+    background: #ed6f6f;
+  }
+  /* value 处于 [low, optimum]时 */
+  &::-webkit-meter-suboptimum-value {
+    background: #efbd47;
+  }
+  /* value 处于 [optimum, max]时 */
+  &::-webkit-meter-optimum-value {
+    background: #55d187;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+
+    width: 20%;
+    height: inherit;
+
+    background-color: transparent;
+
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 5px;
+  }
+  &::before {
+    left: 20%;
+  }
+  &::after {
+    right: 20%;
+  }
+}

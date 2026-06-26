@@ -1,0 +1,86 @@
+.mermaid {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  margin: 8px 0;
+  background: #fff;
+  border: 1px solid #ececee;
+  border-radius: 8px;
+  overflow-x: auto;
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.mermaidFallback {
+  margin: 8px 0;
+  padding: 12px;
+  background: #f7f7f8;
+  border-radius: 8px;
+  overflow-x: auto;
+
+  code {
+    font-size: 13px;
+  }
+}
+
+.artifact {
+  margin: 8px 0;
+  border: 1px solid #ececee;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .artifactBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    background: #f7f7f8;
+    border-bottom: 1px solid #ececee;
+  }
+
+  .artifactLang {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b6e76;
+  }
+
+  .artifactTabs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .artifactTab {
+    padding: 2px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: #6b6e76;
+    cursor: pointer;
+
+    &:hover {
+      background: #ececee;
+    }
+  }
+
+  .artifactTabActive {
+    background: #fff;
+    color: #4f46e5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  .artifactFrame {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: none;
+    background: #fff;
+  }
+}

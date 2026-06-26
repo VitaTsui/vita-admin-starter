@@ -1,0 +1,33 @@
+.tagsContainer {
+  --gap: 8;
+
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: calc(var(--gap) * 1px);
+  overflow: hidden;
+  width: 100%;
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.alignLeft {
+    justify-content: flex-start;
+  }
+
+  &.alignCenter {
+    justify-content: center;
+  }
+
+  &.alignRight {
+    justify-content: flex-end;
+  }
+}
+
+.tag {
+  flex-shrink: 0;
+  margin: 0;
+
+  cursor: default;
+}

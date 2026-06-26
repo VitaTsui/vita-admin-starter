@@ -1,0 +1,78 @@
+.inputNumberWrapper {
+  position: relative;
+
+  display: inline-flex;
+
+  width: 100%;
+  height: 100%;
+
+  .antdInput {
+    width: 100%;
+    height: 100%;
+
+    .ant-input-number-wrapper {
+      height: 100%;
+      min-height: inherit;
+
+      > .ant-input-number,
+      > .ant-input-number-affix-wrapper {
+        height: 100%;
+        min-height: inherit;
+      }
+
+      > .ant-input-number {
+        > .ant-input-number-input-wrap {
+          height: 100%;
+          min-height: inherit;
+
+          > .ant-input-number-input {
+            height: 100%;
+            min-height: inherit;
+          }
+        }
+      }
+    }
+
+    > .ant-input-number-input-wrap {
+      height: 100%;
+      min-height: inherit;
+
+      > .ant-input-number-input {
+        height: 100%;
+      }
+    }
+  }
+
+  &.inputNumberWrapperClear {
+    input {
+      padding-right: 33px;
+    }
+  }
+
+  .clearIcon {
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--cf-text-3);
+    font-size: 14px;
+    z-index: 1;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--cf-text-2);
+    }
+  }
+
+  // 当存在 addonAfter 时，调整清除图标位置
+  // Ant Design 的 addonAfter 会生成 .ant-input-number-group-addon
+  // 清除图标需要向左偏移，避免与 addon 重叠
+  // 使用 CSS 变量来动态设置 addon 宽度，默认值 60px 是合理的估算
+  // 通过 JS 动态计算实际宽度并设置 CSS 变量来覆盖
+  &.hasAddonAfter {
+    .clearIcon {
+      right: calc(11px + var(--addon-after-width, 60px));
+    }
+  }
+}

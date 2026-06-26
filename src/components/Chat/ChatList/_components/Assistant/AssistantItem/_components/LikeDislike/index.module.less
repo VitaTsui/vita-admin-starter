@@ -1,0 +1,41 @@
+.like {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  .likeItem {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+
+    width: max-content;
+    padding: 2px 4px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #5e6772;
+
+    cursor: pointer;
+
+    transition: color 0.3s, background-color 0.3s;
+
+    .likeIcon {
+      font-size: 20px;
+      color: #5e6772;
+
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      color: #060607;
+
+      background-color: #f3f5fc;
+
+      border-radius: 4px;
+
+      .likeIcon {
+        color: #060607;
+      }
+    }
+  }
+}

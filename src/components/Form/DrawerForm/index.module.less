@@ -1,0 +1,51 @@
+.DrawerForm {
+  .ant-drawer-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: default;
+
+    > span {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+
+      font-weight: normal;
+
+      opacity: 0.5;
+
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 2%;
+      row-gap: 20px;
+
+      width: 100%;
+
+      .formItem {
+        width: calc((100% - 2%) / 2);
+      }
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      .ant-btn-icon {
+        font-size: 16px;
+      }
+    }
+  }
+}

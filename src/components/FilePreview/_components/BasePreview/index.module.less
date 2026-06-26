@@ -1,0 +1,80 @@
+.BasePreview {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 0px 1rem;
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  z-index: 1200;
+
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+    color: #fff;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .video {
+    width: 100%;
+    max-width: 1300px;
+    max-height: 90%;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    width: 100%;
+    max-width: 1300px;
+    height: 90%;
+    max-height: fit-content;
+    padding: 20px;
+
+    border-radius: 4px;
+
+    background-color: #fff;
+
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #fff;
+    }
+  }
+}
+

@@ -1,0 +1,55 @@
+.ColumnMgt {
+  .title {
+    cursor: default;
+
+    > div:not(.tips) {
+      color: var(--cf-text-2);
+    }
+
+    .tips {
+      font-size: 12px;
+      font-weight: normal;
+
+      color: var(--cf-text-3);
+    }
+  }
+
+  .widthInput {
+    height: 32px !important;
+  }
+
+  .body {
+    flex: 0 0 auto !important;
+
+    height: 60vh;
+  }
+
+  .checkbox {
+    .ant-checkbox {
+      width: 14px;
+      min-width: 14px;
+      height: 14px;
+      min-height: 14px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    .left {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    .originNode {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+}

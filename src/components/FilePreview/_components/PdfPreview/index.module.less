@@ -1,0 +1,191 @@
+.PdfPreview {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 0px 1rem;
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  z-index: 1200;
+
+  &.full {
+    .pdf {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+
+      margin-top: 0;
+    }
+
+    .toolContainer {
+      opacity: 0;
+
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+    color: #fff;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .pdf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    width: 100%;
+    max-width: 1300px;
+    height: 90%;
+    max-height: fit-content;
+
+    margin-top: -3%;
+
+    border-radius: 4px;
+
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #aaa;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .toolContainer {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .pdfTool {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    padding: 5px 10px;
+
+    background-color: #fff;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 15px 0 rgba(0, 73, 164, 0.11);
+
+    .toolItem {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+
+      .toolItemItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 32px;
+        height: 32px;
+
+        font-size: 24px;
+
+        border-radius: 4px;
+
+        transition: background-color 0.3s, color 0.3s;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        &.disabled {
+          opacity: 0.5;
+
+          cursor: not-allowed;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .page {
+        display: flex;
+        column-gap: 2px;
+
+        font-size: 22px;
+        line-height: 32px;
+        user-select: none;
+
+        cursor: default;
+      }
+    }
+  }
+}
+

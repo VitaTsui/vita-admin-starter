@@ -1,0 +1,83 @@
+.ToolBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  min-height: max-content;
+
+  .title_tabBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      flex-wrap: wrap;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      white-space: nowrap;
+      word-break: keep-all;
+
+      cursor: default;
+
+      .tips {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .tabBar {
+      height: 32px;
+    }
+  }
+
+  &:not(:has(.title_tabBar)) {
+    .btns_tools {
+      width: 100%;
+    }
+  }
+
+  &.legacyNoTitleTabBar {
+    .btns_tools {
+      width: 100%;
+    }
+  }
+
+  .btns_tools {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .buttonGroup {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    .tableTools {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      .toolItem {
+        font-size: 16px;
+
+        opacity: 0.6;
+
+        cursor: pointer;
+
+        &.disabled {
+          opacity: 0.3;
+
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

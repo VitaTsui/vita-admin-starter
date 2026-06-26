@@ -1,0 +1,97 @@
+.RangeContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0px;
+
+  .RangePrefix,
+  .RangeSuffix {
+    height: max-content;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-align: inherit;
+    white-space: nowrap;
+
+    cursor: default;
+  }
+
+  .RangeContent {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0px;
+
+    .RangeInput {
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      height: 100%;
+
+      border-radius: 6px;
+      border: 1px solid var(--cf-border);
+
+      transition: border-color 0.3s, box-shadow 0.3s;
+
+      [class*="antdInput-"] {
+        border: none !important;
+
+        box-shadow: none !important;
+      }
+
+      > span {
+        color: var(--cf-text-3);
+
+        user-select: none;
+
+        cursor: default;
+      }
+
+      &.focused,
+      &:hover {
+        border-color: #1677ff;
+
+        box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+      }
+    }
+
+    .RangeClear {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      color: var(--cf-text-3);
+
+      opacity: 0;
+
+      cursor: pointer;
+
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      .RangeClear {
+        opacity: 1;
+      }
+    }
+
+    &:hasrangeclear {
+      .beforeInput {
+        width: calc(100% - 10px);
+      }
+
+      .afterInput {
+        padding-right: 21px;
+      }
+    }
+  }
+}

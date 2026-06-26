@@ -1,0 +1,28 @@
+.container {
+  display: inline-block;
+  width: 100%;
+  flex: 1;
+  min-width: 0px;
+}
+
+.measureElement {
+  position: absolute;
+  visibility: hidden;
+  white-space: nowrap;
+  top: -9999px;
+  left: -9999px;
+}
+
+.textElement {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &.ellipsisEnd {
+    text-overflow: ellipsis;
+  }
+
+  &.ellipsisStart {
+    text-overflow: clip;
+  }
+}

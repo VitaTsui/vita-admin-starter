@@ -1,0 +1,126 @@
+.treeSelect {
+  --tree-indent-unit-width: 19px;
+  --tree-switcher-width: 16px;
+  --tree-switcher-gap: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  // CF 风格：随外观切换的描边输入控件
+  background: var(--cf-surface);
+  border: 1px solid var(--cf-border);
+  border-radius: 6px;
+
+  .ant-select-selector {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: inherit !important;
+
+    .ant-select-selection-wrap {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+
+    .ant-select-selection-search {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+
+      input[type="search"] {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+      }
+    }
+
+    .ant-select-selection-placeholder {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    .ant-select-selection-item {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+  }
+
+  .ant-select-arrow {
+    width: 14px;
+    height: 14px;
+
+    font-size: 14px;
+  }
+
+  .ant-select-clear {
+    width: 14px;
+    height: 14px;
+
+    font-size: 14px;
+  }
+
+  .ant-tree-select-dropdown {
+    position: fixed;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    .ant-select-tree,
+    .ant-select-tree-treenode,
+    .ant-select-tree-node-content-wrapper,
+    .ant-select-tree-title {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+
+    .ant-select-tree-switcher {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: var(--tree-switcher-width);
+      margin-inline-start: var(--tree-switcher-gap);
+      margin-inline-end: var(--tree-switcher-gap);
+
+      &::before {
+        width: var(--tree-switcher-width);
+        height: 100%;
+      }
+    }
+
+    .ant-select-tree-indent-unit {
+      width: var(--tree-indent-unit-width);
+    }
+
+    .ant-empty,
+    .ant-empty-description {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+
+    .ant-select-tree-list-scrollbar {
+      width: 5px !important;
+
+      > div {
+        background: rgba(127, 127, 127, 0.4) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.iconSelect {
+  .iconShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 100%;
+
+    cursor: pointer;
+  }
+
+  .ant-input-group-addon {
+    padding: 0;
+  }
+}
+
+.popoverContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  width: 500px;
+}
+
+.tabs {
+  max-width: min-content;
+
+  .ant-tabs-nav {
+    margin-bottom: 10px;
+  }
+
+  .ant-tabs-tab {
+    padding: 4px 0px 6px;
+  }
+
+  .typeIcon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    width: 100%;
+    max-height: 240px;
+
+    overflow: auto;
+
+    .iconItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 39px;
+      height: 39px;
+
+      font-size: 16px;
+
+      border: 1px solid #f0edea;
+
+      cursor: pointer;
+
+      &.active {
+        background: #dddddd;
+      }
+    }
+  }
+}

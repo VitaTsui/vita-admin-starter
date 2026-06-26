@@ -1,0 +1,23 @@
+.FileCol {
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  max-width: 100%;
+
+  .fileItem {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    max-width: 100%;
+
+    white-space: nowrap;
+
+    .fileName {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

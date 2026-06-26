@@ -1,0 +1,56 @@
+.markdownEditor {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  width: 100%;
+  height: 100%;
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  ul,
+  ol {
+    list-style: revert;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+  }
+
+  .mdEditor {
+    height: 100%;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    &.disabled {
+      background-color: rgba(0, 0, 0, 0.04);
+
+      cursor: no-drop;
+
+      :global {
+        .rc-md-navigation {
+          pointer-events: none;
+        }
+
+        .editor-container {
+          pointer-events: none;
+
+          .section {
+            textarea,
+            .section-container {
+              background: rgba(0, 0, 0, 0.04);
+            }
+          }
+        }
+      }
+    }
+  }
+}

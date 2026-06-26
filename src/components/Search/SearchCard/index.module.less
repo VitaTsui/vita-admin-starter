@@ -1,0 +1,295 @@
+:root {
+  --searchCard-column-gap: 8px;
+  --searchCard-padding-left-right: 8px;
+}
+
+.SearchCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  .searchBox {
+    width: 100%;
+    padding: 20px;
+    background: var(--cf-surface);
+    border-radius: 8px 8px 0 0;
+
+    .searchInputContainer {
+      max-width: 600px;
+      margin: 0 auto;
+
+      .searchInput {
+        width: 100%;
+        height: 50px;
+
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.collapse {
+    row-gap: 0px;
+
+    .optionsBox {
+      grid-template-rows: 0fr;
+
+      padding: 0px 20px 0px;
+
+      border-top: none;
+    }
+
+    .collapseExpand {
+      .collapseExpandIcon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .optionsBox {
+    display: grid;
+    grid-template-rows: 1fr;
+
+    width: 100%;
+    padding: 20px 20px 12px;
+
+    border-radius: 8px;
+
+    background: var(--cf-surface);
+
+    transition: all 0.3s, border-top 0s;
+  }
+
+  // 当有搜索框时，调整选项框的样式
+  &:has(.searchBox) .optionsBox {
+    border-radius: 0 0 8px 8px;
+    padding-top: 12px;
+  }
+
+  &.legacyHasSearchBox {
+    .optionsBox {
+      border-radius: 0 0 8px 8px;
+      padding-top: 12px;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    transition: height 0.3s;
+
+    row-gap: 10px;
+
+    .optionContainer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    .option {
+      display: flex;
+      column-gap: 4px;
+
+      > span:not(.more) {
+        padding: 3px 0px;
+
+        font-weight: 500;
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        line-height: 26px;
+        white-space: nowrap;
+      }
+
+      &:has(.elementItem) {
+        > span:not(.more) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .optionItems {
+          &.itemsCollapse {
+            min-height: max-content;
+
+            .elementItem {
+              min-height: max-content;
+            }
+          }
+        }
+      }
+
+      &.legacyHasElementItem {
+        > span:not(.more) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .optionItems {
+          &.itemsCollapse {
+            min-height: max-content;
+
+            .elementItem {
+              min-height: max-content;
+            }
+          }
+        }
+      }
+
+      .optionItems {
+        display: flex;
+        flex-wrap: wrap;
+
+        overflow: hidden;
+
+        column-gap: var(--searchCard-column-gap);
+
+        row-gap: 4px;
+
+        &.itemsCollapse {
+          height: 32px;
+        }
+
+        > div {
+          display: flex;
+          align-items: center;
+        }
+
+        > span {
+          padding: 3px var(--searchCard-padding-left-right);
+
+          font-weight: 400;
+          font-size: 16px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          line-height: 26px;
+
+          border-radius: 2px;
+
+          cursor: pointer;
+
+          transition: all 0.3s;
+
+          &.active,
+          &:hover {
+            color: #0e59ef;
+
+            background: rgba(14, 89, 239, 0.12);
+          }
+        }
+
+        .item {
+          max-width: 250px;
+          height: 100%;
+
+          .label {
+            white-space: nowrap;
+          }
+        }
+
+        .help {
+          margin-left: 2px;
+
+          color: #7f7f7f;
+          font-size: 16px;
+        }
+      }
+
+      .more {
+        display: flex;
+        align-items: center;
+
+        height: max-content;
+        padding: 3px 0px;
+
+        color: #7f7f7f;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 22px;
+        white-space: nowrap;
+        column-gap: 1px;
+
+        cursor: pointer;
+
+        transition: color 0.3s;
+
+        &:hover {
+          color: #0e59ef;
+        }
+      }
+    }
+
+    .childrenRow {
+      position: relative;
+    }
+
+    .childrenItems {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: var(--searchCard-column-gap);
+      row-gap: 4px;
+
+      > span {
+        padding: 3px var(--searchCard-padding-left-right);
+
+        color: var(--cf-text);
+        font-weight: 400;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 22px;
+
+        border-radius: 2px;
+
+        cursor: pointer;
+
+        transition: all 0.3s;
+
+        &.active,
+        &:hover {
+          color: #0e59ef;
+          background: rgba(14, 89, 239, 0.12);
+        }
+      }
+    }
+  }
+
+  .collapseExpand {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 20px;
+
+    background-image: url("../bottomLine.png");
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+
+      height: 30px;
+      padding: 10px 20px;
+      margin-top: -8px;
+
+      cursor: pointer;
+
+      .collapseExpandIcon {
+        font-size: 22px;
+
+        opacity: 0.5;
+
+        transition: transform 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.historyContent {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  width: 260px;
+  height: 100%;
+  padding: 10px 0px;
+
+  background-color: #f9f9f9;
+
+  border-right: 1px solid #0d0d0d0d;
+
+  .tools {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .historyList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    flex: 1;
+    width: 100%;
+    min-height: 0px;
+    padding: 0 10px;
+
+    overflow: hidden auto;
+
+    scrollbar-gutter: stable;
+
+    &::-webkit-scrollbar-thumb {
+      width: 10px;
+
+      background-color: #0000001a;
+
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      width: 10px;
+
+      background-color: transparent;
+
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.upload {
+  height: 100%;
+
+  .ant-upload {
+    height: max-content;
+
+    .upBtn {
+      height: 32px;
+    }
+  }
+
+  &.inline {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .ant-upload-disabled {
+    .singleFile {
+      cursor: not-allowed;
+
+      > div {
+        background-color: rgba(0, 0, 0, 0.04);
+
+        border-color: var(--cf-border);
+
+        > span {
+          color: var(--cf-text-3) !important;
+        }
+      }
+    }
+  }
+
+  .singleFile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 28px;
+    row-gap: 5px;
+
+    cursor: pointer;
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      width: max-content;
+      height: 46px;
+
+      border: 1px solid rgba(204, 204, 204, 1);
+
+      > span {
+        &:first-child {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 112px;
+          height: 100%;
+
+          font-family: Noto Sans SC;
+          font-size: 18px;
+          font-weight: 500;
+          color: rgba(51, 51, 51, 1);
+
+          border-right: 1px solid rgba(204, 204, 204, 1);
+        }
+
+        &:nth-child(2) {
+          display: flex;
+          align-items: center;
+
+          width: 226px;
+          height: 100%;
+          padding: 0px 19px;
+
+          font-family: Noto Sans SC;
+          font-size: 18px;
+          font-weight: 500;
+          color: rgba(122, 122, 122, 1);
+
+          > a {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    > span {
+      font-family: Noto Sans SC;
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(122, 122, 122, 1);
+    }
+  }
+
+  &.ant-upload-drag {
+    height: 180px;
+
+    border-radius: 8px;
+    border: 1px dashed rgba(19, 76, 255, 0.6);
+    background: rgba(19, 76, 255, 0.02);
+
+    transition: all 0.3s;
+
+    &:hover {
+      background: rgba(19, 76, 255, 0.08);
+
+      border-color: #134cff;
+    }
+
+    .uploadIcon {
+      font-size: 40px;
+      color: #134cff;
+    }
+
+    .uploadText {
+      font-size: 14px;
+      color: #212121;
+
+      > div:first-child {
+        margin: 16px 0 8px;
+      }
+
+      > div:last-child {
+        font-size: 12px;
+        color: #8d8e99;
+      }
+    }
+  }
+}
+
+.FormUpload {
+  .ant-form-item-control-input-content {
+    > span {
+      width: 100%;
+    }
+  }
+}

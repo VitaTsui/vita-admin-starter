@@ -1,0 +1,51 @@
+.Copy {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  width: max-content;
+  padding: 2px 4px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #5e6772;
+
+  cursor: pointer;
+
+  transition: color 0.3s, background-color 0.3s;
+
+  border-radius: 4px;
+
+  .icon {
+    font-size: 18px;
+    color: #5e6772;
+
+    transition: color 0.3s;
+  }
+
+  &:hover {
+    color: #060607;
+
+    background-color: #f3f5fc;
+
+    .icon {
+      color: #060607;
+    }
+  }
+}
+
+.Copyed {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-color);
+
+  cursor: default;
+
+  .icon {
+    font-size: 18px;
+  }
+}

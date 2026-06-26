@@ -1,0 +1,73 @@
+.Assistant {
+  max-width: 100%;
+
+  .bubbleRoot {
+    max-width: 100%;
+
+    .bubbleBody {
+      max-width: 100%;
+
+      .bubbleHeader {
+        flex-direction: column;
+
+        font-size: 14px;
+        font-weight: bold;
+
+        .time {
+          font-size: 12px;
+          color: #666;
+          font-weight: normal;
+        }
+      }
+
+      .bubbleContent {
+        min-height: 0;
+        padding: 0;
+
+        background-color: transparent;
+      }
+    }
+  }
+
+  .contBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0px;
+    height: max-content;
+
+    .num {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+
+      margin-top: 10px;
+
+      font-size: 12px;
+      color: #666;
+
+      > div {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+
+        font-weight: 500;
+
+        cursor: default;
+      }
+
+      .icon {
+        font-size: 16px;
+
+        cursor: pointer;
+
+        &.disabled {
+          color: #ccc;
+
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

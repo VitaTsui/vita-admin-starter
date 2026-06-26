@@ -1,0 +1,62 @@
+.Editor {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--cf-border);
+  border-radius: 6px;
+
+  .toolbar {
+    border-bottom: 1px solid #ccc;
+
+    .w-e-bar-item {
+      color: var(--cf-text-3);
+    }
+  }
+
+  .editor {
+    flex: 1;
+
+    min-height: 0px;
+
+    cursor: text;
+  }
+
+  &.disabled {
+    .editor {
+      border-color: var(--cf-border);
+
+      cursor: not-allowed;
+
+      .w-e-text-container {
+        background-color: rgba(0, 0, 0, 0.04);
+
+        color: var(--cf-text-3);
+      }
+    }
+  }
+}
+
+.EditorContent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  cursor: default;
+
+  .w-e-text-container {
+    padding: 0 !important;
+
+    [data-slate-editor] {
+      padding: 0 !important;
+    }
+
+    p {
+      margin: 0 !important;
+    }
+  }
+}
