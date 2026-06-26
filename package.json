@@ -16,7 +16,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
     "@ant-design/x": "^2.0.1",
-    "@hsu-react/ui": "file:../hsu-ui",
+    "@hsu-react/ui": "^0.0.1",
     "@antv/g": "^6.1.21",
     "@antv/g6": "4.8.24",
     "@antv/g6-plugin": "0.8.24",
