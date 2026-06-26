@@ -23,6 +23,7 @@
     /* alias */
     "baseUrl": ".",
     "paths": {
+      "@/components/*": ["node_modules/@hsu-react/ui/es/components/*"],
       "@/*": ["src/*"]
     }
   },

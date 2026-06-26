@@ -1,2 +1,0 @@
-export { calculatePosition } from "./calculatePosition";
-

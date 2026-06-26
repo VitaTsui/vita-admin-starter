@@ -1,2 +1,0 @@
-export { useXlsxData } from "./useXlsxData";
-

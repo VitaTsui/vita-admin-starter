@@ -9,6 +9,8 @@ import { PermissionsContent } from "@/hooks/usePermissions";
 import { NavTabBarContent } from "@/hooks/useDropTab";
 import { NavTabBarTitleContent } from "@/hooks/useSetTabTitle";
 import { getAccessToken } from "@/utils/auth";
+import { ConfigProvider as HsuConfigProvider } from "@hsu-react/ui";
+import { get, post, del, put } from "@/services/Axios";
 
 const Routes: React.FC = observer(() => {
   const { router, permissions } = RouterStore;
@@ -54,15 +56,18 @@ const Routes: React.FC = observer(() => {
   }, [tabTitles, setTabTitle]);
 
   return (
-    <ReloadContent.Provider value={value}>
-      <NavTabBarContent.Provider value={dropTabValue}>
-        <NavTabBarTitleContent.Provider value={tabTitleValue}>
-          <PermissionsContent.Provider value={permissionsValue}>
-            <AliveScope>{useRoutes(router)}</AliveScope>
-          </PermissionsContent.Provider>
-        </NavTabBarTitleContent.Provider>
-      </NavTabBarContent.Provider>
-    </ReloadContent.Provider>
+    // 注入 @hsu-react/ui 的权限与请求实现，供库内组件（Button hasPermi、ImportForm 等）使用
+    <HsuConfigProvider permissions={permissions} request={{ get, post, del, put }}>
+      <ReloadContent.Provider value={value}>
+        <NavTabBarContent.Provider value={dropTabValue}>
+          <NavTabBarTitleContent.Provider value={tabTitleValue}>
+            <PermissionsContent.Provider value={permissionsValue}>
+              <AliveScope>{useRoutes(router)}</AliveScope>
+            </PermissionsContent.Provider>
+          </NavTabBarTitleContent.Provider>
+        </NavTabBarContent.Provider>
+      </ReloadContent.Provider>
+    </HsuConfigProvider>
   );
 });
 

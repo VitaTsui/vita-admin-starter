@@ -17,8 +17,15 @@ const config = {
   module: {
     rules: [
       {
+        // @hsu-react/ui 的 es 产物为 ESM(type:module)、相对导入不带扩展名，
+        // 关闭 webpack5 的 fullySpecified 强校验，允许其无扩展名解析。
+        test: /\.m?js$/,
+        resolve: { fullySpecified: false },
+      },
+      {
         test: /\.(png|jpe?g|gif|webp|svg)$/i,
-        exclude: /node_modules/,
+        // 排除 node_modules，但放行 @hsu-react/ui 自带的图片资源
+        exclude: /node_modules\/(?!@hsu-react\/ui\/)/,
         type: "asset/resource",
       },
       {
@@ -134,6 +141,12 @@ const config = {
       ".less",
     ],
     alias: {
+      // 组件统一改为引入 @hsu-react/ui（既有 @/components/* 子路径透明转发到包的 es 产物）。
+      // 必须放在 "@" 之前，确保 @/components 优先命中。
+      "@/components": path.resolve(
+        __dirname,
+        "../node_modules/@hsu-react/ui/es/components",
+      ),
       "@": path.resolve(__dirname, "../src"),
     },
     fallback: {
