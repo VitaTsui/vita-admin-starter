@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ColumnsType } from "@/components/Table";
+import { ColumnsType, ChakraButtonProps, FormItemProps, Operate, Panel } from "@hsu-react/ui";
 
-import { ChakraButtonProps } from "@/components/Button";
 import DataModalStore from "./DataModalStore";
 import DictForm from "../DictForm";
-import { FormItemProps } from "@/components/FormItem";
-import Operate from "@/components/Operate";
 import { PlusOutlined } from "@ant-design/icons";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
-import Panel from "@/components/Panel";
 
 export interface DataModalProps {
   id?: number | string;

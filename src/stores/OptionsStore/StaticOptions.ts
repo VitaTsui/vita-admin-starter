@@ -1,4 +1,4 @@
-import { SelectOption } from "@/components/Select";
+import { SelectOption } from "@hsu-react/ui";
 
 export const YES_NO: SelectOption[] = [
   { label: "是", value: 1 },

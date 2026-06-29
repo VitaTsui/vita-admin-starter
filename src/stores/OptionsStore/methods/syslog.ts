@@ -1,4 +1,4 @@
-import { SelectOption } from "@/components/Select";
+import { SelectOption } from "@hsu-react/ui";
 import { getEnum } from "@/services/apis/enum";
 import { makeAutoObservable } from "mobx";
 

@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.less";
-import Chat from "@/components/Chat";
+import { Chat, Modal, ModalProps, Table, ColumnsType } from "@hsu-react/ui";
 import { observer } from "mobx-react-lite";
 import ChatModalStore from "./ChatModalStore";
-import Modal, { ModalProps } from "@/components/Modal";
 import { getUserInfo } from "@/utils/auth";
 import { Options } from "@/stores/OptionsStore";
 import { CaretDownOutlined, CaretRightOutlined } from "@ant-design/icons";
-import Table, { ColumnsType } from "@/components/Table";
 import { AnyObject } from "antd/es/_util/type";
 
 const mutationObserver = new MutationObserver(() => {

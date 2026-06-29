@@ -1,4 +1,4 @@
-import { TreeData } from "@/components/Tree";
+import { TreeData } from "@hsu-react/ui";
 import {
   DeptData,
   DeptSearchData,

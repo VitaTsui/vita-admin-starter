@@ -3,10 +3,7 @@ import { observer } from "mobx-react-lite";
 import dayjs from "dayjs";
 import { getDateRange } from "hsu-utils";
 
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
-import Operate from "@/components/Operate";
+import { ColumnsType, FormItemProps, Panel, Operate, ChakraButtonProps } from "@hsu-react/ui";
 import OptionsStore, { Options } from "@/stores/OptionsStore";
 
 import JobLogStore from "./JobLogStore";
@@ -15,7 +12,6 @@ import CleanJobLogForm from "./CleanJobLogForm";
 import ChatModal from "../_components/ChatModal";
 import ChatModalStore from "../_components/ChatModal/ChatModalStore";
 import styles from "./index.module.less";
-import { ChakraButtonProps } from "@/components/Button";
 import { DeleteOutlined, RobotOutlined } from "@ant-design/icons";
 import { Form, message } from "antd";
 import useSearch from "@/hooks/useSearch";

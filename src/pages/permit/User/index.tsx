@@ -2,18 +2,13 @@ import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { PlusOutlined, ReloadOutlined } from "@ant-design/icons";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
-import Operate from "@/components/Operate";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Operate, Tags } from "@hsu-react/ui";
 import OptionsStore from "@/stores/OptionsStore";
 
 import UserStore from "./UserStore";
 import UserForm from "./UserForm";
 import ResetPasswordForm from "./ResetPasswordForm";
 import styles from "./index.module.less";
-import Tags from "@/components/Tags";
 
 const User: React.FC = observer(() => {
   const {

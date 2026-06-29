@@ -3,7 +3,7 @@ import { autorun, makeAutoObservable } from "mobx";
 import { cloneDeep, debounce } from "lodash";
 import wsCache, { CACHE_KEY } from "@/utils/wsCache";
 
-import Icon from "@/components/Icon";
+import { Icon, Panel } from "@hsu-react/ui";
 import NoFoundPage from "@/404";
 import { Outlet } from "react-router";
 import { ADMIN_BASE, RouteType } from "./router.config";
@@ -12,7 +12,6 @@ import RouterContainer from "./_components/RouterContainer";
 import { getAccessToken } from "@/utils/auth";
 import { lazy } from "react";
 import { array_is_includes } from "hsu-utils";
-import Panel from "@/components/Panel";
 
 // 菜单路径映射：旧路径 -> 新路径
 const MENU_PATH_MAPPING: Readonly<Record<string, string>> = {

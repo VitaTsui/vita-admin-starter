@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
-import { FormItemProps } from "@/components/FormItem";
-import Form from "@/components/Form";
+import { FormItemProps, Form } from "@hsu-react/ui";
 import OprLogFormStore from "./OprLogFormStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";

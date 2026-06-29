@@ -1,12 +1,11 @@
 import React from "react";
 
-import { FormItemProps } from "@/components/FormItem";
-import Form from "@/components/Form";
+import { FormItemProps, Form } from "@hsu-react/ui";
 import SeedSmsFormStore from "./SeedSmsFormStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
 import { Options } from "@/stores/OptionsStore";
-import { PhoneRule } from "@/components/FormItem/rules";
+import { PhoneRule } from "@hsu-react/ui/es/components/FormItem/rules";
 
 interface SeedSmsFormProps {
   open?: boolean;

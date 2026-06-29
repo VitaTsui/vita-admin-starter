@@ -8,7 +8,7 @@ import {
   ChatHistoryData,
   ChatMessage,
   RetrieverResource,
-} from "@/components/Chat";
+} from "@hsu-react/ui";
 import { routerHistory } from "@hsu-react/single-router";
 
 // 常量定义

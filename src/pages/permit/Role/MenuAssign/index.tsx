@@ -3,15 +3,10 @@ import { Key } from "react";
 import { Tooltip } from "antd";
 import classNames from "classnames";
 
-import Tree from "@/components/Tree";
-import Checkbox from "@/components/Checkbox";
+import { Tree, Checkbox, CheckedKeys, TreeData, Modal, Icon, TextEllipsis } from "@hsu-react/ui";
 import MenuAssignStore from "./MenuAssignStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
-import { CheckedKeys, TreeData } from "@/components/Tree";
-import Modal from "@/components/Modal";
-import Icon from "@/components/Icon";
-import TextEllipsis from "@/components/TextEllipsis";
 
 interface MenuAssignProps {
   open?: boolean;

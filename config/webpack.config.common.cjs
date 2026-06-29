@@ -141,12 +141,6 @@ const config = {
       ".less",
     ],
     alias: {
-      // 组件统一改为引入 @hsu-react/ui（既有 @/components/* 子路径透明转发到包的 es 产物）。
-      // 必须放在 "@" 之前，确保 @/components 优先命中。
-      "@/components": path.resolve(
-        __dirname,
-        "../node_modules/@hsu-react/ui/es/components",
-      ),
       "@": path.resolve(__dirname, "../src"),
     },
     fallback: {

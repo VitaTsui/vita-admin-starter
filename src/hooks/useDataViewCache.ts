@@ -1,7 +1,6 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
+import { ColumnsType, FormItemProps } from "@hsu-react/ui";
 import wsCache from "@/utils/wsCache";
 
 interface ColumnCacheData {

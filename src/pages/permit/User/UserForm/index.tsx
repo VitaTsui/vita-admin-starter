@@ -3,12 +3,11 @@ import {
   LengthRule,
   Password,
   PhoneRule,
-} from "@/components/FormItem/rules";
+} from "@hsu-react/ui/es/components/FormItem/rules";
 import React, { useEffect } from "react";
 import { Form as AntdForm } from "antd";
 
-import Form from "@/components/Form";
-import { FormItemProps } from "@/components/FormItem";
+import { Form, FormItemProps } from "@hsu-react/ui";
 import UserFormStore from "./UserFormStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";

@@ -9,7 +9,7 @@ import { computed, makeObservable, observable } from "mobx";
 
 import FormModalStore from "@/stores/basisStoreClass/FormModalStore";
 import { ResType } from "@/services/Axios";
-import { TreeData, CheckedKeys } from "@/components/Tree";
+import { TreeData, CheckedKeys } from "@hsu-react/ui";
 
 /** 菜单节点下（含子菜单）功能权限授权数量汇总 */
 export interface MenuGrantInfo {

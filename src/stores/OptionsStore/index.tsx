@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { SelectOption } from "@/components/Select";
+import { SelectOption } from "@hsu-react/ui";
 
 // 导入各个功能模块的方法类
 import PermitMethods from "./methods/permit";

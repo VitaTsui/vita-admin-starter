@@ -6,7 +6,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 
-import FormItem from "@/components/FormItem";
+import { FormItem } from "@hsu-react/ui";
 import LoginStore from "./LoginStore";
 import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";

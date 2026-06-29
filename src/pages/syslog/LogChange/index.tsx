@@ -3,14 +3,10 @@ import { observer } from "mobx-react-lite";
 import dayjs from "dayjs";
 import { DownOutlined, PlusOutlined, RightOutlined } from "@ant-design/icons";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Operate } from "@hsu-react/ui";
 import LogChangeStore from "./LogChangeStore";
 import styles from "./index.module.less";
 import LogChangeForm from "./LogChangeForm";
-import Operate from "@/components/Operate";
 import { LogChangeData } from "@/services/apis/syslog/logChange";
 
 const LogChange: React.FC = observer(() => {

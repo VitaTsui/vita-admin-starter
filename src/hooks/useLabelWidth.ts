@@ -1,4 +1,4 @@
-import { FormItemProps } from "@/components/FormItem";
+import { FormItemProps } from "@hsu-react/ui";
 import { get_string_size } from "hsu-utils";
 import { useMemo } from "react";
 

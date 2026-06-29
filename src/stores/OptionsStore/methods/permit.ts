@@ -1,5 +1,5 @@
 import { getEnum, getRoleList, getUserList } from "@/services/apis/enum";
-import { SelectOption } from "@/components/Select";
+import { SelectOption } from "@hsu-react/ui";
 import { makeAutoObservable } from "mobx";
 
 /**

@@ -3,11 +3,7 @@ import { observer } from "mobx-react-lite";
 import { Tag } from "antd";
 import { CloudSyncOutlined, PlusOutlined, SwapOutlined } from "@ant-design/icons";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
-import Operate from "@/components/Operate";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Operate } from "@hsu-react/ui";
 
 import DeptStore from "./DeptStore";
 import DeptForm from "./DeptForm";

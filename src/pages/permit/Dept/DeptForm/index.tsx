@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 
 import DeptFormStore from "./DeptFormStore";
 import DeptStore from "../DeptStore";
-import Form from "@/components/Form";
-import { FormItemProps } from "@/components/FormItem";
+import { Form, FormItemProps } from "@hsu-react/ui";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
 

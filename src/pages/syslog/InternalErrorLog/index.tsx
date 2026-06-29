@@ -1,9 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Operate } from "@hsu-react/ui";
 import InternalErrorLogStore from "./InternalErrorLogStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
@@ -12,7 +9,6 @@ import CleanInternalErrorLogForm from "./CleanInternalErrorLogForm";
 import ChatModal from "../_components/ChatModal";
 import ChatModalStore from "../_components/ChatModal/ChatModalStore";
 import { RobotOutlined, DeleteOutlined } from "@ant-design/icons";
-import Operate from "@/components/Operate";
 import OptionsStore, { Options } from "@/stores/OptionsStore";
 import { message } from "antd";
 import dayjs from "dayjs";

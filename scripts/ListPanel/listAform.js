@@ -1,16 +1,13 @@
 `
 import React, { useEffect, useState } from "react";
 
-import { ChakraButtonProps} from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel } from "@hsu-react/ui";
 import <NAME>Store from "./<NAME>Store";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
 import <NAME>Form from "./<NAME>Form";
 import { PlusOutlined } from "@ant-design/icons";
-import Operate from "@/components/Operate";
+import { Operate } from "@hsu-react/ui";
 
 const <NAME>: React.FC = observer(() => {
   const {

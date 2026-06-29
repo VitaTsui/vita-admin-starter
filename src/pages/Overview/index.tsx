@@ -1,9 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import Icon from "@/components/Icon";
-import Chart from "@/components/Chart";
-import Panel from "@/components/Panel";
+import { Icon, Chart, Panel } from "@hsu-react/ui";
 import { getUserInfo } from "@/utils/auth";
 import { adminPath } from "@/router/router.config";
 import styles from "./index.module.less";

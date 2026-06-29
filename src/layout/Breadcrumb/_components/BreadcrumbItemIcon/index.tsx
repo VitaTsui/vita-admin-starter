@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Space } from "antd";
-import Icon from "@/components/Icon";
+import { Icon } from "@hsu-react/ui";
 
 interface BreadcrumbItemIconProps {
   icon?: ReactNode;

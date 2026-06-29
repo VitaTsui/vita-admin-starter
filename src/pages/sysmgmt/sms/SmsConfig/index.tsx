@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Operate, Switch } from "@hsu-react/ui";
 import SmsConfigStore from "./SmsConfigStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
 import SmsConfigForm from "./SmsConfigForm";
 import { PlusOutlined } from "@ant-design/icons";
-import Operate from "@/components/Operate";
 import OptionsStore, { Options } from "@/stores/OptionsStore";
-import Switch from "@/components/Switch";
 import SmsConfigFormStore from "./SmsConfigForm/SmsConfigFormStore";
 
 const SmsConfig: React.FC = observer(() => {

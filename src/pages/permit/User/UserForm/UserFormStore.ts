@@ -11,7 +11,7 @@ import { computed, makeObservable, observable } from "mobx";
 
 import FormModalStore from "@/stores/basisStoreClass/FormModalStore";
 import { ResType } from "@/services/Axios";
-import { SelectOption } from "@/components/Select";
+import { SelectOption } from "@hsu-react/ui";
 
 class UserFormStore extends FormModalStore<UserData> {
   @computed

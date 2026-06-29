@@ -1,6 +1,5 @@
-import Form from "@/components/Form";
-import { FormItemProps } from "@/components/FormItem";
-import { Password } from "@/components/FormItem/rules";
+import { Form, FormItemProps } from "@hsu-react/ui";
+import { Password } from "@hsu-react/ui/es/components/FormItem/rules";
 import PwdChangeStore from "./PwdChangeStore";
 import React from "react";
 import { observer } from "mobx-react-lite";

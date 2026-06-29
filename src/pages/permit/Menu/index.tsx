@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { PlusOutlined, ReloadOutlined, SwapOutlined } from "@ant-design/icons";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
-import Icon from "@/components/Icon";
-import Operate from "@/components/Operate";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Icon, Operate } from "@hsu-react/ui";
 import OptionsStore, { Options } from "@/stores/OptionsStore";
 import RouterService from "@/router/RouterService";
 

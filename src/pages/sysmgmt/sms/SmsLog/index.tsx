@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-import { ChakraButtonProps } from "@/components/Button";
-import { ColumnsType } from "@/components/Table";
-import { FormItemProps } from "@/components/FormItem";
-import Panel from "@/components/Panel";
+import { ChakraButtonProps, ColumnsType, FormItemProps, Panel, Operate } from "@hsu-react/ui";
 import SmsLogStore from "./SmsLogStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";
 import SmsLogForm from "./SmsLogForm";
-import Operate from "@/components/Operate";
 import OptionsStore, { Options } from "@/stores/OptionsStore";
 import { SendOutlined, RedoOutlined } from "@ant-design/icons";
 import SeedSmsForm from "./SeedSmsForm";
 import SeedSmsFormStore from "./SeedSmsForm/SeedSmsFormStore";
-import { PhoneRule } from "@/components/FormItem/rules";
+import { PhoneRule } from "@hsu-react/ui/es/components/FormItem/rules";
 
 const SmsLog: React.FC = observer(() => {
   const {

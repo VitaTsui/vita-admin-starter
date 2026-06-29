@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import FileFormStore from "./FileFormStore";
-import Form from "@/components/Form";
-import { FormItemProps } from "@/components/FormItem";
+import { Form, FormItemProps } from "@hsu-react/ui";
 import { Options } from "@/stores/OptionsStore";
 import { observer } from "mobx-react-lite";
 import styles from "./index.module.less";

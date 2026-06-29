@@ -1,7 +1,6 @@
 import React from "react";
 import { Form as AntdForm } from "antd";
-import { FormItemProps } from "@/components/FormItem";
-import Form from "@/components/Form";
+import { FormItemProps, Form } from "@hsu-react/ui";
 
 interface ResetPasswordFormProps {
   open: boolean;
