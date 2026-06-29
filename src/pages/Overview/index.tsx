@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import Icon from "@/components/Icon";
 import Chart from "@/components/Chart";
+import Panel from "@/components/Panel";
 import { getUserInfo } from "@/utils/auth";
 import { adminPath } from "@/router/router.config";
 import styles from "./index.module.less";
@@ -73,8 +74,9 @@ const Overview: React.FC = () => {
   const { nickname } = getUserInfo();
 
   return (
-    <div className={styles.overview}>
-      <div className={styles.banner}>
+    <Panel.Default contentClassName={styles.overviewContent}>
+      <div className={styles.overview}>
+        <div className={styles.banner}>
         <div>
           <div className={styles.hello}>
             你好{nickname ? `，${nickname}` : ""} 👋
@@ -133,7 +135,8 @@ const Overview: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </Panel.Default>
   );
 };
 

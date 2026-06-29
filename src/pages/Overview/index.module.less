@@ -1,13 +1,17 @@
+// Panel.Default 内容白卡可滚动（flex:1 需补 min-height:0 才能正确约束高度）
+.overviewContent {
+  min-height: 0;
+
+  overflow: auto;
+}
+
+// 白卡与内边距由 Panel.Default 提供，这里只保留内部纵向布局
 .overview {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
 
   width: 100%;
-  height: 100%;
-  padding: 16px;
-
-  overflow: auto;
 }
 
 .banner {
