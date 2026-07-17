@@ -205,25 +205,25 @@
   // Light nav: white background with dark text
   &.light {
     .header .title {
-      color: rgb(0 0 0 / 88%);
+      color: var(--cf-text);
     }
 
     .header-right {
       .app-version {
-        color: rgb(0 0 0 / 45%);
+        color: var(--cf-text-2);
 
         &:hover {
-          background-color: rgb(0 0 0 / 4%);
-          color: rgb(0 0 0 / 88%);
+          background-color: var(--cf-row-hover);
+          color: var(--cf-text);
         }
       }
 
       .user {
-        color: rgb(0 0 0 / 75%);
+        color: var(--cf-text);
 
         &:hover {
-          background-color: rgb(0 0 0 / 6%);
-          color: rgb(0 0 0 / 88%);
+          background-color: var(--cf-row-hover);
+          color: var(--cf-text);
         }
       }
     }
